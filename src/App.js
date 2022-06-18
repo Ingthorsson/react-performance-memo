@@ -1,21 +1,21 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, memo } from 'react';
 
 
   const list = new Array(20).fill(0).map(() => `Item - ${Math.random()}`);
 
-  const List = ({list}) => (
+  const List =  memo (({list}) => (
     <ul>
       {list.map((item) => <li key={item}>{item}</li>)}
     </ul>
-  );
+  ));
 
 
 
 function App() {
 
   const [n, setN] = useState(0);
-
+  
   return (
     <div className="App">
       <header className="App-header">
