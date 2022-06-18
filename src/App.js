@@ -1,22 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+
+
+  const list = new Array(20).fill(0).map(() => `Item - ${Math.random()}`);
+
+  const List = ({list}) => (
+    <ul>
+      {list.map((item) => <li key={item}>{item}</li>)}
+    </ul>
+  );
+
+
 
 function App() {
+
+  const [n, setN] = useState(0);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <List list={list}/>
+        <p>Clicked {n} times</p>
+        <button onClick={() => setN(n+1)}>click me</button>
       </header>
     </div>
   );
