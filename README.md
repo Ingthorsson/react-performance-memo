@@ -1,3 +1,7 @@
+Performance with memo hook
+==========================
+use the react profiler in devtools to view changes in render performance of each commit.
+
 first commit
 ======
 Renders every time a click is updated
@@ -18,3 +22,9 @@ Add list filter
 When the list filter is added the list will render again when the "click me" is incrimented.
 
 This is because the filter shares a refrence to list 
+
+Add useMemo
+===========
+Wraping the filter function in useMemo stores the output of the function.
+
+We are back to the only thing rendering on the "click me" is the counter. 

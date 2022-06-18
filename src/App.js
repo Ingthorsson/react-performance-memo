@@ -1,5 +1,5 @@
 import './App.css';
-import { useState, memo } from 'react';
+import { useState, memo, useMemo } from 'react';
 
 
   const list = new Array(20).fill(0).map(() => `Item - ${Math.random()}`);
@@ -16,7 +16,7 @@ function App() {
 
   const [n, setN] = useState(0);
   const [filter, setFilter] = useState('');
-  const filteredElements = list.filter((item) => item.includes(filter) );
+  const filteredElements = useMemo( () => list.filter((item) => item.includes(filter)),[filter] );
   
   return (
     <div className="App">
