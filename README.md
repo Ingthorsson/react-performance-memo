@@ -27,4 +27,8 @@ Add useMemo
 ===========
 Wraping the filter function in useMemo stores the output of the function.
 
-We are back to the only thing rendering on the "click me" is the counter. 
+We are back to the only thing rendering on the "click me" is the counter.
+
+Seperate components
+===================
+Seperate into seperate components and only the relevent component will render.
