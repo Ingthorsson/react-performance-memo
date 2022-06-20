@@ -32,3 +32,5 @@ We are back to the only thing rendering on the "click me" is the counter.
 Seperate components
 ===================
 Seperate into seperate components and only the relevent component will render.
+
+example from: https://www.youtube.com/watch?v=sc5EsyjOLj8
